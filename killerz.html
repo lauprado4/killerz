@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>KILLERZ!</title>
+        <link rel="stylesheet" href="./styles.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <section id="seleccionar-asesino">
+            <h1 class="titulo">KILLERZ!</h1>
+            
+            <h2 class="seleccion">Selecciona tu asesino:</h2>
+    
+            <div class="tarjeta" id="contenedor-tarjetas">
+                
+            </div>
+
+            <br>  
+            <button class="boton-empezar" id="boton-start">Comenzar</button>
+        </section>
+
+        <section id="ver-mapa">
+            <h2 class="subtitulo">Recorre el mapa con tu asesino!</h2>
+            <canvas id="mapa"></canvas>
+            <div id="movimientoA">
+                <button onmouseup="detenerMovimiento()" onmousedown="moverArriba()">⬆</button>
+            </div>
+            <div id="movimientos">
+                <button onmouseup="detenerMovimiento()" onmousedown="moverIzquierda()">⬅</button>
+                <button onmouseup="detenerMovimiento()" onmousedown="moverAbajo()">⬇</button>
+                <button onmouseup="detenerMovimiento()" onmousedown="moverDerecha()">➡</button>
+            </div>
+        </section>
+
+        <section id="confirmacion-asesino">
+            <h1 class="titulo">KILLERZ!</h1>
+            <div>
+                <p id="info2"> Tu asesino <span id="name"></span> tiene <span id="vidas-jugador"> 🧡🧡🧡 </span> vidas.
+                </p>
+                <p id="info2"> El asesino enemigo <span id="nameR"></span> tiene <span id="vidas-enemigo"> 🧡🧡🧡 </span> vidas.
+                </p>
+            </div>    
+        </section>
+        
+        <section id="seleccionar-ataque">
+            <h2 class="subtitulo">Selecciona tu ataque:</h2>
+
+            <div class="botones" id="contenedor-botones">
+              
+            </div>
+        </section>
+
+        <section id="Reiniciar">
+            <button id="boton-reset">Reiniciar</button>
+        </section> 
+
+        <section id="mensajes">
+            <div class="texto"></div>
+        </section>
+
+        <script src="./js/killerz.js"></script>
+    </body>
+
+</html>
+
